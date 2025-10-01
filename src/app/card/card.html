@@ -1,0 +1,12 @@
+<div class="card">
+  <img [src]="images()" alt="image title"  />
+  <div class="card-content">
+    <h3>{{title()}} </h3>
+    <p class="description">
+      {{description()}}
+    </p>
+    <p class="category">Category: {{category()}}</p>
+    <p class="price">{{price()}}</p>
+    <button [routerLink]="['/products',id()]">View Product</button>
+  </div>
+</div>

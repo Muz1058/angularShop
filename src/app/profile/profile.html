@@ -1,0 +1,32 @@
+<div *ngIf="user" class="profile-card">
+  <div class="profile-header">
+    <img [src]="user?.avatar" alt="{{ user?.name }}" class="avatar" />
+    <h2>{{ user?.name }}</h2>
+    <p class="email">{{ user?.email }}</p>
+  </div>
+
+  <div class="profile-info">
+    <div class="info-row">
+      <span class="label">Gender:</span>
+      <span>{{ user?.gender }}</span>
+    </div>
+    <div class="info-row">
+      <span class="label">DOB:</span>
+      <span>{{ user?.dob }}</span>
+    </div>
+    <div class="info-row">
+      <span class="label">Father Name:</span>
+      <span>{{ user?.fatherName }}</span>
+    </div>
+    <div class="info-row">
+      <span class="label">Blood Group:</span>
+      <span>{{ user?.bloodGrp }}</span>
+    </div>
+  </div>
+
+  <div class="address">
+    <h3>Address</h3>
+    <p>{{ user?.address?.street }}, {{ user?.address?.city }}</p>
+    <p>{{ user?.address?.state }} - {{ user?.address?.zip }}</p>
+  </div>
+</div>

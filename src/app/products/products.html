@@ -1,0 +1,28 @@
+<h1>Products</h1>
+
+<!-- Category Filter Buttons -->
+<div class="filters">
+  <button (click)="filterByCategory('beauty')">Beauty</button>
+  <button (click)="filterByCategory('fragrances')">Fragrances</button>
+  <button (click)="filterByCategory('furniture')">Furniture</button>
+  <button (click)="filterByCategory('groceries')">Groceries</button>
+  <button (click)="filterByCategory('')">All</button>
+  <div class="sort">
+    <button (click)="sortByPrice('low')">Price: Low → High</button>
+    <button (click)="sortByPrice('high')">Price: High → Low</button>
+  </div>
+</div>
+<div class="productCards">
+  <!-- Product Cards -->
+  <div class="productCards" *ngFor="let p of productCopy; trackBy: trackById">
+    <app-card appHighlight
+      [id]="p.id"
+      [images]="p.images[0]"
+      [description]="p.description"
+      [category]="p.category"
+      [price]="p.price"
+      [title]="p.title"
+    >
+    </app-card>
+  </div>
+</div>

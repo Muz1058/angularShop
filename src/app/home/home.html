@@ -1,0 +1,11 @@
+<div class="label">
+  <h1 class="heading">Welcome to SHOP {{ userName }}</h1>
+
+  <div *ngIf="!userName; else loggedIn">
+    <button class="btn" (click)="gotologin()">Go to Login</button>
+  </div>
+
+  <ng-template #loggedIn>
+    <button class="btn" (click)="viewProfile()">View your profile</button>
+  </ng-template>
+</div>

@@ -1,0 +1,56 @@
+<div *ngIf="product" class="product-detail-container">
+
+  <!-- Left: Image Gallery -->
+  <div class="image-gallery">
+    <img [src]="product.images[0] || product.thumbnail" alt="{{ product.title }}" class="main-image" />
+
+    <!-- Thumbnails -->
+    <div class="thumbnail-row">
+      <img 
+        *ngFor="let img of product.images" 
+        [src]="product.thumbnail" 
+        alt="thumbnail"
+        (click)="product.thumbnail = img"
+        [class.active]="product.thumbnail === img"
+      />
+    </div>
+  </div>
+
+  <!-- Right: Product Info -->
+  <div class="product-info">
+    <h1>{{ product.title }}</h1>
+    <p class="brand">Brand: <span>{{ product.brand }}</span></p>
+    <p class="category">Category: {{ product.category }}</p>
+    
+    <div class="price-section">
+      <span class="price">${{ product.price }}</span>
+      <span class="discount">-{{ product.discountPercentage }}%</span>
+    </div>
+
+    <p class="stock" [class.out-of-stock]="product.stock === 0">
+      {{ product.availabilityStatus }} ({{ product.stock }} in stock)
+    </p>
+
+    <p class="rating"> ⭐ {{ product.rating }} / 5</p>
+    <p class="description">{{ product.description }}</p>
+
+    <div class="tags">
+      <span *ngFor="let tag of product.tags" class="tag">{{ tag }}</span>
+    </div>
+
+    
+    <div class="action-buttons">
+      <button class="btn-cart"> Add to Cart</button>
+      <button class="btn-buy"> Buy Now</button>
+    </div>
+  </div>
+</div>
+
+<!-- Reviews Section -->
+<div *ngIf="product.reviews?.length" class="reviews-section">
+  <h2>Customer Reviews</h2>
+  <div *ngFor="let r of product.reviews" class="review-card">
+    <p class="reviewer"><strong>{{ r.reviewerName }}</strong> – ⭐ {{ r.rating }}</p>
+    <p class="comment">"{{ r.comment }}"</p>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+nav{
+    background-color: #014241;
+    color: #F5EFD8;
+    display: flex;
+    padding: 0px 50px;
+    justify-content: space-between;
+
+}
+nav ul {
+    display: flex;
+    gap:50px;
+    list-style: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+nav ul li a{
+   text-decoration: none;
+   color: #F5EFD8;
+}
+.active{
+    border-bottom: 3px solid #F5EFD8;
+}
+nav ul li {
+    padding: 10px 4px;
+}
+nav ul li:hover{
+    background-color: #012d2d;
+}
+.logo{
+    color: #F5EFD8;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 36px;
+    padding: 0px 50px;
+    margin-top: 25px;
+
+}

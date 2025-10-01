@@ -1,0 +1,74 @@
+/* Page heading */
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin: 20px 0;
+  color: #333;
+  font-weight: 600;
+}
+.sort {
+  display: flex;
+  gap: 10px;
+}
+
+.sort button {
+  background: #28a745;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.sort button:hover {
+  background: #1e7e34;
+}
+
+
+/* Filter buttons */
+.filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.filters button {
+  background: #4CAF50;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.filters button:hover {
+  background: #45a049;
+  transform: translateY(-2px);
+}
+
+/* Product grid */
+.productCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 0 20px 40px;
+}
+
+/* Card wrapper (app-card inside) */
+app-card {
+  display: block;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+app-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}

@@ -1,0 +1,55 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Ali Khan",
+      "fatherName": "Ahmed Khan",
+      "email": "ali.khan@example.com",
+      "dob": "1998-06-15",
+      "gender": "Male",
+      "bloodGrp": "B+",
+      "password": "ali12345",
+      "avatar": "https://randomuser.me/api/portraits/men/1.jpg",
+      "address": {
+        "street": "123 Model Town",
+        "city": "Lahore",
+        "state": "Punjab",
+        "zip": "54000"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Ayesha Fatima",
+      "fatherName": "Nadeem Fatima",
+      "email": "ayesha.f@example.com",
+      "dob": "2001-03-20",
+      "gender": "Female",
+      "bloodGrp": "O+",
+      "password": "ayesha543",
+      "avatar": "https://randomuser.me/api/portraits/women/2.jpg",
+      "address": {
+        "street": "456 Gulberg",
+        "city": "Karachi",
+        "state": "Sindh",
+        "zip": "74000"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Hassan Raza",
+      "fatherName": "Raza Hussain",
+      "email": "hassan.raza@example.com",
+      "dob": "1995-11-05",
+      "gender": "Male",
+      "bloodGrp": "A-",
+      "password": "hassan321",
+      "avatar": "https://randomuser.me/api/portraits/men/3.jpg",
+      "address": {
+        "street": "789 Canal Road",
+        "city": "Faisalabad",
+        "state": "Punjab",
+        "zip": "38000"
+      }
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+.box {
+  text-align: center;
+  border: 2px solid #014241;
+  border-radius: 30px;
+  margin: 10px auto auto;
+  padding: 10px;
+  max-width: 500px;
+  background-color: #f5efd8;
+}
+
+label {
+  font-weight: 500;
+  font-size: 18px;
+  padding: 4px 8px;
+}
+
+input {
+  padding: 8px 12px;
+  margin-left: 10px;
+  outline: none;
+  border: none;
+}
+
+.btn {
+  background-color: #014241;
+  padding: 10px 20px;        /* smaller, normal padding */
+  border-radius: 8px;        /* rounded corners, not a circle */
+  color: #f5efd8;
+  border: none;
+  cursor: pointer;
+  display: inline-block;     /* ensures button text stays visible */
+}
+
+
+.heading {
+  background-color: #014241;
+  color: #f5efd8;
+  margin: 30px auto 20px;
+  border: 1px solid black;
+}
+.btn:disabled{
+  opacity: 0.75;
+  cursor: not-allowed;
+}
+.warning{
+  color: red;
+}
+.alert{
+  color: red;
+  margin-top: 0;
+  
+}
+input.ng-touched.ng-invalid{
+  border: 2px solid red;
+}
+input.ng-touched.ng-valid{
+  border: 2px solid #014241;
+}

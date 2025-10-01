@@ -1,0 +1,36 @@
+<div class="box">
+  <h1 class="heading">Login</h1>
+  <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+    <label for="email">Enter your email</label>
+    <input type="email" name="userEmial" [(ngModel)]="userEmail" required minlength="3" #email="ngModel"/> <br /><br />
+    @if (email.invalid&&(email.touched)) {
+      <div class="alert">
+        @if (email.hasError('requirede')) {
+          <span>Email is required</span>
+        }
+        @if (email.hasError('minlength')) {
+          <span>Enter complete email</span>
+        }
+      </div>
+    }
+    <label for="password">Enter your password</label>
+    <input type="password" name="userPassword" [(ngModel)]="userPassword" required minlength="6" #password="ngModel" /> <br /><br />
+    @if(password.invalid&& password.touched){
+      <div class="alert">
+        @if (password.hasError('required')) {
+          <span>Password is required</span>
+        }
+        @if (password.hasError('minlength')) {
+          <span>Password must be 6 char long</span>
+        }
+      </div>
+    }
+
+    <button class="btn" type="submit" [disabled]="!loginForm.form.valid">Login</button>
+    <div *ngIf="!validCredential" class="warning">!Invalid Credentials</div>
+    <div>
+      <label>click to</label>
+      <a routerLink="/signup">SignUp</a>
+    </div>
+  </form>
+</div>
